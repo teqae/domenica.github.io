@@ -1,0 +1,449 @@
+/* styles.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffe6f2;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f5f5f5;
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 2px solid #ffb3d9;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+
+
+
+h1 {
+    color: #ff5470;
+    font-family: 'cursive';
+    font-size: 48px;
+    margin: 0;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    text-align: right;
+}
+
+.menu li {
+    display: inline;
+    margin-left: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #ff5470;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #000000;
+}
+
+.animated-section {
+    background-color: #fff;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column; /* Cambiamos a dirección de columna */
+    align-items: center;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.image {
+    flex: 1;
+    text-align: left; /* Alinea la imagen a la izquierda */
+    padding: 20px;
+}
+
+.text {
+    flex: 1;
+    text-align: left; /* Alinea el texto a la izquierda */
+    padding: 20px;
+}
+
+.bordered-image {
+    border: 5px solid #ff5470;
+    border-radius: 10px;
+}
+
+h2 {
+    color: #ff5470;
+    font-family: 'cursive';
+    font-size: 36px;
+    margin-top: 20px;
+}
+
+.animated-fade-in {
+    opacity: 1;
+    animation: fadeIn 2s ease-in-out;
+}
+
+footer {
+    background-color: #ff5470;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    font-size: 14px;
+    margin: 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/* styles.css */
+
+/* ... (código CSS anterior) ... */
+
+.image img {
+    filter: blur(3px); /* Aplica un efecto de desenfoque a la imagen por defecto */
+    transition: filter 0.5s, transform 0.5s; /* Agrega una transición suave */
+}
+
+.image img:hover {
+    filter: blur(0); /* Quita el efecto de desenfoque al pasar el cursor */
+    transform: scale(1.1); /* Aumenta el tamaño de la imagen al pasar el cursor */
+}
+
+/* styles.css */
+
+/* Estilo adicional para la sección de música */
+#musica .music-player {
+    position: relative;
+    background-color: #fff; /* Fondo blanco para el reproductor */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#musica .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Agrega una imagen de fondo aquí */
+    background-image: url('tu-imagen-de-fondo.jpg');
+    background-size: cover;
+    opacity: 0.3; /* Ajusta la opacidad según tus preferencias */
+}
+
+#musica .music-controls {
+    display: flex;
+    align-items: center;
+}
+
+#musica .music-controls img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+#musica .track-info p {
+    color: #98c5e2; /* Color de acento similar al verde de Spotify */
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#musica .progress-bar {
+    width: 100%;
+    height: 8px;
+    background-color: #ccc; /* Color de fondo de la barra de progreso */
+    border-radius: 4px;
+    margin: 20px 0;
+}
+
+/* Estilo para el reproductor de audio */
+#musica .spotify-style {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+#musica .lyrics {
+    margin-top: 20px;
+    /* Agrega estilos para mostrar la letra de la canción en tiempo real */
+}
+
+/* Efectos de paralaje para la sección de música */
+.parallax-background {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.parallax-background::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+}
+
+/* Efectos de desplazamiento suave para elementos interactivos */
+a, button {
+    transition: transform 0.2s;
+}
+
+a:hover, button:hover {
+    transform: scale(1.1);
+}
+
+/* Animación de carga */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loading-spinner {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid #ffffff;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 2s linear infinite;
+}
+
+/* Efectos de desvanecimiento */
+.fade-in {
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Estilo adicional para el fondo con efecto de paralaje */
+#musica .parallax-bg {
+    background-image: url('tu-imagen-de-fondo.jpg'); /* Agrega aquí tu imagen de fondo */
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3; /* Ajusta la opacidad según tus preferencias */
+    z-index: -1;
+}
+
+#musica .music-player {
+    position: relative;
+    background-color: #fcf0f0; /* Fondo blanco para el reproductor */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* Agregar animaciones de entrada para las secciones */
+.animated-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s, transform 1s;
+}
+
+.animated-section.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Estilos para el contenedor de "Sobre Nosotros" */
+.about-us-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Espacio entre el texto y la imagen */
+}
+
+/* Estilos para la imagen en "Sobre Nosotros" */
+.about-us-image img {
+    width: 100%;
+    max-width: 400px;
+    filter: blur(8px);
+    border: 5px solid #1DB954;
+    border-radius: 10px;
+    transition: filter 0.5s;
+}
+
+/* Estilos para el texto "Sobre Nosotros" */
+.about-us-text {
+    flex: 1; /* El texto ocupará todo el espacio restante */
+    margin-right: 30px; /* Separación entre el texto y la imagen */
+}
+
+/* Estilos cuando se quita el blur al pasar el mouse */
+.about-us-image img:hover {
+    filter: blur(0);
+}
+/* Estilo para el texto de neon */
+.texto-neon {
+    font-size: 36px;
+    color: #9e1264; /* Color del efecto de neon */
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: neon 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes neon {
+    0% {
+        text-shadow: 0 0 5px #ff6da6, 0 0 5px #ff6da6, 0 0 5px #ff6da6;
+    }
+    100% {
+        text-shadow: 0 0 20px #ff6da6, 0 0 30px #ff6da6, 0 0 40px #ff6da6;
+    }
+}
+/* Estilos para la sección "Nuestros Servicios" */
+#servicios {
+    background-color: #f7f7f7; /* Color de fondo */
+    padding: 20px;
+}
+
+/* Estilos iniciales */
+.service-image-container {
+    filter: blur(4px); /* Desenfoque inicial */
+    transition: filter 0.3s; /* Transición para suavizar cambios */
+}
+
+.service-image-container:hover {
+    filter: blur(0); /* Sin desenfoque al pasar el mouse */
+}
+
+/* Mantén el borde (marco) */
+.service-image {
+    border: 2px solid #00ff00; /* Borde estilo neon desde el principio */
+    box-shadow: 0 0 10px #00ff00; /* Sombra estilo neon desde el principio */
+}
+
+.neon-text {
+    color: #9e1264; /* Color de texto de neón (puedes ajustar el color) */
+    text-shadow: 0 0 5px #ff6da6, 0 0 10px #ff6da6, 0 0 15px #ff6da6; /* Efecto de sombra de neón */
+    animation: neonBlink 1s infinite alternate; /* Nombre de la animación y duración */
+}
+
+@keyframes neonBlink {
+    from {
+        text-shadow: none; /* Sin sombra */
+    }
+    to {
+        text-shadow: 0 0 5px #ff6da6, 0 0 10px #ff6da6, 0 0 15px #ff6da6; /* Efecto de sombra de neón */
+    }
+}
+.contact-image {
+    text-align: left; /* Alinea la imagen a la derecha */
+    position: relative; /* Posición relativa para los pseudo-elementos */
+}
+
+.contact-image img {
+    max-width: 600px; /* Ancho máximo de la imagen */
+    max-height: 150px; /* Altura máxima de la imagen */
+    border: 2px solid #00ff00; /* Borde estilo neon */
+    box-shadow: 0 0 10px #00ff00; /* Sombra estilo neon */
+}
+
+/* Efecto de desenfoque inicial */
+.contact-image img {
+    filter: blur(5px); /* Aplica el desenfoque */
+    transition: filter 0.3s; /* Transición para suavizar cambios */
+}
+
+/* Al pasar el mouse, quitar el desenfoque */
+.contact-image:hover img {
+    filter: blur(0);
+}
+.cuadro-blanco {
+    background-color: white;
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    opacity: 0.5;
+    z-index: -1; /* Coloca el cuadro blanco detrás de otros elementos */
+  }
+  
+  .imagen-opaca {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .imagen-flor {
+    opacity: 1;
+  }
+  h2 strong {
+    font-size: 36px;
+    color: #9e1264; /* Color del efecto de neón */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: neon 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes neon {
+    0% {
+        text-shadow: 0 0 5px #ff6da6, 0 0 5px #ff6da6, 0 0 5px #ff6da6;
+    }
+    100% {
+        text-shadow: 0 0 20px #ff6da6, 0 0 30px #ff6da6, 0 0 40px #ff6da6;
+    }
+}
+p strong:contains("I LOVE YOU") {
+    font-size: 18px; /* Tamaño de fuente */
+    color: #9e1264; /* Color del efecto de neón */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: neon 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes neon {
+    0% {
+        text-shadow: 0 0 5px #ff6da6, 0 0 5px #ff6da6, 0 0 5px #ff6da6;
+    }
+    100% {
+        text-shadow: 0 0 20px #ff6da6, 0 0 30px #ff6da6, 0 0 40px #ff6da6;
+    }
+}
